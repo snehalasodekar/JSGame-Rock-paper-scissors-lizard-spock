@@ -12,6 +12,8 @@
     var rounds = 5;
     var roundNumMsg = document.getElementById("roundNumMsg");
     var roundResult = document.getElementById("roundResult");
+    var roundNum = "Round "+rounds;
+    
     /*
     *   Display values to lables using function
     */
@@ -19,18 +21,20 @@
 
         element.innerText = value;
     }
-
+assignVal(roundNumMsg,roundNum);
 /**
  * reset button, reload page
  */
 document.getElementById("reset").addEventListener("click",()=>{
     location.reload();
+    
 });
     document.querySelectorAll('.selectButton').forEach(btn => {
         btn.addEventListener("click",()=>{
             if(rounds > 0){
             // when player click on button computer also plays.
-            let roundNum = "Round "+rounds;
+                rounds--;
+                roundNum = "Round "+rounds;
                 assignVal(roundNumMsg,roundNum);
             let randomNum = Math.floor(Math.random() * choiceArray.length);
                 computerChoice = choiceArray[randomNum];
@@ -139,14 +143,16 @@ document.getElementById("reset").addEventListener("click",()=>{
             }
             assignVal(playerScoreMsg,playerScore);
             assignVal(computerScoreMsg,computerScore);
-            rounds--;
+            
         }else{
             if(playerScore > computerScore){
                 assignVal(roundResult,"Player is winner of this round");
-            }else if(playerScore == computerScore){
+            }else if(computerScore > playerScore){
                 assignVal(roundResult,"Computer is winner of this round");
-            } else{
+            } else if(playerScore == computerScore){
                 assignVal(roundResult,"This is tie .. no one is winner");
+            } else{
+                assignVal(roundResult,"This is No winner .. Please try again");
             }
             assignVal(message,"Round One ends, replay");
         }/**/
