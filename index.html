@@ -10,7 +10,7 @@
     </head>
     <body>
         <div class="container-fluid">
-            <div class="row">
+            <div class="row msgDiv">
                 <div class="col text-center">
                     <h2>Let's Play</h2>
                     <p> welcome to Rock-Paper-Scissors-Lizard-Spock game</p>
@@ -20,24 +20,34 @@
                     <p><span id="roundNumMsg"></span></p>
                 </div>
             </div>
-            <div class="row border p-2 buttonCollection text-center">
-                <div class="col"><!-- <img src="" id=""/> -->
-                    <button type="button" id="rock" class="selectButton" name ="rock" value ="0">Rock</button></div>
-                <div class="col">
-                    <button type="button" id="paper" class="selectButton" name ="paper" value ="1" >Paper</button>
+            <div class="row border p-2 buttonCollection text-center gx-2">
+                <div class="col-md-2"><!-- <img src="" id=""/> -->
+                    <img src="./src/img/stone.png" alt="rock" id="rock" class="selectButton" name ="rock" value ="0"/>
+                    <!-- <button type="button" id="rock" class="selectButton" name ="rock" value ="0">Rock</button></div> -->
+                    <p class="p-2 m-2">Rock</p>
                 </div>
-                <div class="col">
-                    <button type="button" id="scissors" class="selectButton" name ="scissors" value ="2">Scissors</button>
+                <div class="col-md-2">
+                    <img src="./src/img/paper.png" alt="paper" id="paper" class="selectButton" name ="paper" value ="1"/>
+                    <!-- <button type="button" id="paper" class="selectButton" name ="paper" value ="1" >Paper</button> -->
+                    <p class="p-2 m-2">Paper</p>
                 </div>
-                <div class="col">
-                    <button type="button" id="lizard" class="selectButton" name ="lizard" value ="3">Lizard</button>
+                <div class="col-md-2">
+                    <img src="./src/img/scissors.png" alt="scissors" id="scissors" class="selectButton" name ="scissors" value ="2"/>
+                    <!-- <button type="button" id="scissors" class="selectButton" name ="scissors" value ="2">Scissors</button> -->
+                    <p class="p-2 m-2">Scissors</p>
                 </div>
-                <div class="col">
-                    <button type="button" id="spock" class="selectButton" name ="spock" value ="4">Spock</button>
+                <div class="col-md-2">
+                    <img src="./src/img/curved-lizard.png" alt="lizard" id="lizard" class="selectButton" name ="lizard" value ="3"/>
+                    <!-- <button type="button" id="lizard" class="selectButton" name ="lizard" value ="3">Lizard</button> -->
+                    <p class="p-2 m-2">Lizard</p>
                 </div>
-                
+                <div class="col-md-2">
+                    <img src="./src/img/spock.png" alt="spock" id="spock" class="selectButton" name ="spock" value ="4"/>
+                    <!-- <button type="button" id="spock" class="selectButton" name ="spock" value ="4">Spock</button> -->
+                    <p class="p-2 m-2">Spock</p>
+                </div>
             </div>
-            <div class="row border m-2 text-center fst-italic fs-3">
+            <div class="row border m-2 text-center fst-italic fs-3 msgDiv">
                 <p id="messageDiv""></p>
             </div>
             <div class="row border m-2 ">
@@ -54,7 +64,6 @@
                     <p> Computer Selects : <span class="computerChoice" id="computerSelection"></span></p>
                     <p> Computer Score : <span id="computerScore"></span></p>
                 </div>
-
             </div>
         </div>
         <script src="./src/js/script.js"></script>
