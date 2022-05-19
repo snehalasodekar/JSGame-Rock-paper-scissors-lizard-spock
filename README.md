@@ -25,6 +25,14 @@ Make a Rock paper scissors lizard Spock. Based on the original game "Rock Paper 
 ## Dev Steps : 
 - [x] Make a read me with Rules, Features and Developing steps of game.
 - [ ] Make layout of page
---[] Add opponent
---[] Add the 5 buttons for making selection.
-- [ ] 
+--[ ] Add opponent
+--[ ] Add the 5 buttons for making selection.
+-[ ] Add logic of game 
+- [ ] Download icons for the 5 buttons
+/**assign class to all button and on click of a particular button get its value and save it in an array.
+     * display users selection on html
+     *  display computer is selecting
+     * add 5 seconds delay
+     * display computer's choice
+     * display the winner
+     * /
